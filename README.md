@@ -1,54 +1,32 @@
-# React + TypeScript + Vite
+# 📝 마크다운 노트
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+간단하고 직관적인 **마크다운 실시간 미리보기 노트 앱**입니다.  
+좌측에 마크다운 문법으로 입력하면, 우측에서 HTML 결과를 실시간으로 확인할 수 있어요.  
+**다크모드 전환, 폰트 스타일 변경, 도움말 패널, 마크다운 파일 저장 기능**까지 지원합니다.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 배포 링크
 
-## Expanding the ESLint configuration
+👉 [ https://markdown-omega-nine.vercel.app/ ]
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🛠 사용 기술
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- **React** - UI 구성 및 상태 관리
+- **Vite** - 빠른 개발 빌드 도구
+- **TypeScript** - 정적 타입 지원
+- **marked** - 마크다운 파서
+- **CSS** - 반응형 레이아웃 + 다크모드
+- **Vercel** - 정적 웹사이트 배포
+- **GitHub** - 버전 관리
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## ✨ 주요 기능
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+- [x] 실시간 마크다운 → HTML 미리보기
+- [x] 다크모드 / 라이트모드 전환
+- [x] 폰트 스타일 변경 (Monospace, Sans, Serif)
+- [x] 마크다운 파일 저장 (.md)
+- [x] 마크다운 문법 도움말 패널
