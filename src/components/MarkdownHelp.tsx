@@ -1,6 +1,4 @@
-import React from "react";
 import "./MarkdownHelp.css";
-console.log(React);
 const MarkdownHelp = () => {
   return (
   <div className="markdown-help">
