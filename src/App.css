@@ -1,0 +1,171 @@
+/* 전체 앱 배경 및 가운데 정렬 */
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f2f2f2;
+  padding: 2rem;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.app.dark {
+  background: #1e1e1e;
+}
+
+/* 💡 가운데 카드 형태 */
+.card {
+  display: flex;
+  flex-direction: row;
+  width: 960px;
+  max-width: 100%;
+  gap: 1rem;
+  background: transparent;
+}
+
+/* 마크다운 입력창, 미리보기 영역 공통 */
+.editor,
+.preview {
+  flex: 1;
+  height: 80vh;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: monospace;
+  font-size: 1rem;
+  background: white;
+  box-sizing: border-box;
+  overflow-y: auto;
+  white-space: pre-wrap;
+}
+
+/* 마크다운 미리보기 내용 스타일 */
+.preview h1 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.preview ul {
+  list-style: disc;
+  margin-left: 1.5rem;
+  color: #333;
+}
+
+.preview li {
+  margin-bottom: 0.5rem;
+}
+
+/* 다크모드 적용 */
+.app.dark .editor,
+.app.dark .preview {
+  background: #2e2e2e;
+  color: #eee;
+  border-color: #555;
+}
+
+.app.dark .preview ul {
+  color: #ccc;
+}
+
+/* 버튼 컨테이너 */
+.buttons {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  z-index: 10;
+}
+
+/* 토글 & 다운로드 버튼 */
+.toggle-button,
+.download-button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #e0e0e0;
+  color: #222;
+  transition: 0.2s ease;
+}
+
+.toggle-button:hover,
+.download-button:hover {
+  background-color: #d0d0d0;
+}
+
+.app.dark .toggle-button,
+.app.dark .download-button {
+  background-color: #444;
+  color: #fff;
+}
+
+.editor,
+.preview {
+  color: #222; /* ✅ 글자색 추가 */
+}
+
+.markdown-help {
+  width: 240px;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: #f5f5f5;
+  font-size: 0.9rem;
+  color: #333;
+  height: 80vh;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.app.dark .markdown-help {
+  background-color: #2a2a2a;
+  color: #eee;
+}
+
+.markdown-help h3 {
+  margin-top: 0;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.markdown-help code {
+  background-color: #e0e0e0;
+  padding: 0.1rem 0.3rem;
+  border-radius: 4px;
+}
+
+.app.dark .markdown-help code {
+  background-color: #444;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  width: 1200px; /* 📏 너비 넓혀줌 */
+  max-width: 100%;
+  gap: 1rem;
+}
+
+.editor,
+.preview {
+  font-family: var(--custom-font, monospace); /* 기본값 */
+}
+
+.font-selector {
+  padding: 0.3rem 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #eee;
+  background: #eee;
+  cursor: pointer;
+  color: #222;
+  height: 2.2rem;
+}
+
+.app.dark .font-selector {
+  background: #444;
+  color: white;
+  border: 1px solid #666;
+}
